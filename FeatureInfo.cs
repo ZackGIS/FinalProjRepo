@@ -23,7 +23,7 @@ using Esri.GameEngine.Geometry;
 
 public class FeatureInfo : MonoBehaviour
 {
-    public ArcGISGeometry MapGeometry { get; private set; } //strores the ArcGIS geom created from the geoJSON feature. Geom is assigned within this class only
+    public ArcGISGeometry MapGeometry { get; private set; } //strores the ArcGIS geom created from the geoJSON feature.
     public JObject feature; //stores the entire feature as a JObject
 
     public string FeatureType  //gets the feature type value of the feature
