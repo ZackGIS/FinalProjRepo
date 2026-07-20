@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.852637,
+          33.2781
+        ]
+      },
+      "properties": {
+        "place": "#Tomaryne",
+        "date": "2026-06-26",
+        "coordinates": "46.852637,33.2781",
+        "squad": "",
+        "description": "Russian FAB strikes Ukrainian Armed Forces positions near Tomaryne.",
+        "source": "https://t.me/Brigada_VARYAG/84"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.425417,
+          35.483266
+        ]
+      },
+      "properties": {
+        "place": "#VelykaPysarivka",
+        "date": "2026-06-26",
+        "coordinates": "50.425417,35.483266",
+        "squad": "",
+        "description": "Russian airstrikes on Ukrainian UAV control center in Velyka Pysarivka.",
+        "source": "https://t.me/warriorofnorth/19613"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.731795192110866,
+          37.62202795
+        ]
+      },
+      "properties": {
+        "place": "#Kramatorsk",
+        "date": "2026-06-26",
+        "coordinates": "48.731795192110866,37.62202795",
+        "squad": "",
+        "description": "Footage of a Russian airstrike on technological equipment at a Ukrainian gas distribution station in Kramatorsk.",
+        "source": "https://t.me/lost_armour/10061"
+      }
+    }
+  ]
+}
