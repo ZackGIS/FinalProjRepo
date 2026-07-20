@@ -1,0 +1,50 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    34.260144,
+                    50.903397
+                ]
+            },
+            "properties": {
+                "summary": "<|assistant|>\nUS strikes targeting nuclear facilities in Iran, including Fordo, Natanz, and Isfahan, occurred on Saturday.",
+                "location": "fordo",
+                "source": "https://www.bbc.com/news/articles/c1m8nmx75evo"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    32.6707877,
+                    51.6650002
+                ]
+            },
+            "properties": {
+                "summary": "<|assistant|>\nUS strikes targeting nuclear facilities in Iran, including Fordo, Natanz, and Isfahan, occurred on Saturday.",
+                "location": "isfahan",
+                "source": "https://www.bbc.com/news/articles/c1m8nmx75evo"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    33.5071275,
+                    51.9135547
+                ]
+            },
+            "properties": {
+                "summary": "<|assistant|>\nUS strikes targeting nuclear facilities in Iran, including Fordo, Natanz, and Isfahan, occurred on Saturday.",
+                "location": "natanz",
+                "source": "https://www.bbc.com/news/articles/c1m8nmx75evo"
+            }
+        }
+    ]
+}
