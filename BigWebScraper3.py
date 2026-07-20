@@ -294,7 +294,7 @@ async def access_and_analyze_urls_with_loader(urls):
 
             print(f"\n--- Analyzing chunk {i + 1}/{len(tokenized_chunks)} ---")
             summary_text = summarize_chunk(chunk, ner_entities)
-            print(f"\n📝 Summary:\n{summary_text}")
+            print(f"\n Summary:\n{summary_text}")
 
             all_summaries.append(summary_text)
             ner_locs_per_summary[summary_text] = list(locs)
