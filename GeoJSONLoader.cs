@@ -73,7 +73,7 @@ public class GeoJSONLoader : MonoBehaviour
         }
     }
 
-    // Function to create the game object the the heiracrchy procedurally. Takes the lat, lon coordinates as parameters. 
+    // Function to create the game object
     private void CreateFeatureVisual(JObject feature)
     {
         GameObject marker = pointPrefab ? Instantiate(pointPrefab) : GameObject.CreatePrimitive(PrimitiveType.Sphere);
@@ -96,7 +96,7 @@ public class GeoJSONLoader : MonoBehaviour
     {
         while (!map.gameObject.activeInHierarchy)
         {
-            yield return null; // Wait for the next frame
+            yield return null; 
         }
 
         ArcGISLocationComponent locationComponent = marker.AddComponent<ArcGISLocationComponent>();
