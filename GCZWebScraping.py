@@ -6,8 +6,8 @@ from datetime import datetime
 
 
 
-api_id = 20139028
-api_hash = 'c9146b63101289d057c8d96a9cbc345e'
+api_id = -------------
+api_hash = '---------------'
 channel_usernames = ['militarysummary']  # Example channel usernames
 
 # Initialize Telegram client
