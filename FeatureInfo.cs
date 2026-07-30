@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
 using Esri.GameEngine.Geometry;
-//INSTRUCTIONS
+//***INSTRUCTIONS
 //This is a helper class built on top of Json.Linq to provide properties and functions to make GeoJSON feature data easily accessible regardless of its format.
 /* JObject -- can be anything with a "{}" as its value
    JProperty -- can be any key such as "tpye", "geometry", "coordinates", "name", etc
@@ -198,9 +198,7 @@ public class FeatureInfo : MonoBehaviour
                     yield return (GetLatitude(coordinate), GetLongitude(coordinate));
                 }
                 break;
-
         }
-
     }
 
     private ArcGISGeometry CreatePoint()   //Creates a point from properties Latitude/Longitude
