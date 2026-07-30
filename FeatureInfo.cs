@@ -8,7 +8,7 @@ using Esri.GameEngine.Geometry;
    JValue -- a value pair that is represented by a string or that actual values in an array ("Point" value for geometry type "type" key)
    JArray -- a value pair that's represented by an array (coordinates key/value have as their value a JArray of JValues
 
-   Feature --> JObject
+   JObject --> Feature
         JProperty --> featureType
                 JValue --> "Feauture
         JProperty --> "Geometry"
@@ -23,9 +23,8 @@ using Esri.GameEngine.Geometry;
 
 public class FeatureInfo : MonoBehaviour
 {
-    public ArcGISGeometry MapGeometry { get; private set; } //strores the ArcGIS geom created from the geoJSON feature.
+    public ArcGISGeometry MapGeometry { get; private set; } //Stores the ArcGIS geom created from the geoJSON feature.
     public JObject feature; //stores the entire feature as a JObject
-
     public string FeatureType  //gets the feature type value of the feature
     {
         get
@@ -114,7 +113,7 @@ public class FeatureInfo : MonoBehaviour
         }
     }
 
-    public double Latitude  //Gets the latitude value (for points) **read-only property
+    public double Latitude  //Gets the latitude value (for points) 
     {
         get
         {
@@ -122,7 +121,7 @@ public class FeatureInfo : MonoBehaviour
         }
     }
 
-    public double Longitude //Gets the longitude value (for points) **read-only property
+    public double Longitude //Gets the longitude value (for points) 
     {
         get
         {
@@ -130,7 +129,7 @@ public class FeatureInfo : MonoBehaviour
         }
     }
 
-    private double GetLatitude(JToken coordinate) //Have to pass in coordinates to form a line or polygon so using a function.
+    private double GetLatitude(JToken coordinate) // GetLatitude/GetLongitude are used to retrieve lat/lon iterating through coord pairs.
     {
         return coordinate[0].Value<double>();
     }
@@ -170,6 +169,37 @@ public class FeatureInfo : MonoBehaviour
         {
             yield return property;
         }
+    }
+
+    public IEnumerable<(double latitude, double longitude)> GetCoordinates() //returns every coordinate for the feature as a sequence of coord pairs
+    {
+        if(Coordinates == null)
+        {
+            yield break;
+        }
+
+        switch (GeometryType)
+        {
+            case "Point":
+                yield return (Latitude, Longitude);
+                break;
+
+            case "Linestring":
+                foreach(JToken coordinate in Coordinates)
+                {
+                    yield return (GetLatitude(coordinate), GetLongitude(coordinate));
+                }
+                break;
+
+            case "Polygon":
+                foreach (JToken coordinate in Coordinates[0])
+                {
+                    yield return (GetLatitude(coordinate), GetLongitude(coordinate));
+                }
+                break;
+
+        }
+
     }
 
     private ArcGISGeometry CreatePoint()   //Creates a point from properties Latitude/Longitude
@@ -266,3 +296,4 @@ public class FeatureInfo : MonoBehaviour
         Debug.Log($"Feature initialized successfully. Type: {FeatureType}, Geometry: {GeometryType}, Coordinates: [{Latitude}, {Longitude}]"); //for now only have Points.
     }
 }
+
