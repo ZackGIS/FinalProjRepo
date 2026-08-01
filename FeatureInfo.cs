@@ -8,8 +8,25 @@ using Esri.GameEngine.Geometry;
    JProperty -- can be any key such as "tpye", "geometry", "coordinates", "name", etc
    JValue -- a value pair that is represented by a string or that actual values in an array ("Point" value for geometry type "type" key)
    JArray -- a value pair that's represented by an array (coordinates key/value have as their value a JArray of JValues
-
-   JObject --> Feature
+****EXAMPLE FEATURE****
+ "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.852637,
+          33.2781
+        ]
+      },
+      "properties": {
+        "place": "#Tomaryne",
+        "date": "2026-06-26",
+        "coordinates": "46.852637,33.2781",
+        "squad": "",
+        "description": "Russian FAB strikes Ukrainian Armed Forces positions near Tomaryne.",
+        "source": "https://t.me/Brigada_VARYAG/84"
+      }
+      ************
+   JObject --> Feature                                                                              
         JProperty --> featureType
                 JValue --> "Feauture
         JProperty --> "Geometry"
